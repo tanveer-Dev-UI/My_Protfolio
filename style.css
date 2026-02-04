@@ -1223,45 +1223,50 @@ section {
   padding-left: 6%;
   padding-right: 6%;
 }
-@media (max-width: 768px) {
+/* ===== MOBILE NAVBAR FIX (ALL PHONES) ===== */
+@media (max-width: 1080px) {
 
-  /* NAVBAR */
-  .navbar {
+  header.navbar {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: clamp(14px, 4vw, 20px);
+    justify-content: center;   /* NAV CENTER */
+    padding: 16px 20px;
   }
 
-  /* LOGO WRAPPER */
-  .navbar .logo {
+  /* LOGO — LEFT, BIG, CLEAN */
+  header.navbar .logo {
+    position: absolute;
+    left: 20px;
     display: flex;
     align-items: center;
-    margin-left: clamp(4px, 2vw, 12px);
   }
 
-  /* 🔥 LOGO — RESPONSIVE LIKE ZOMATO */
-  .navbar .logo img {
-    height: clamp(26px, 6vw, 38px);
+  header.navbar .logo img {
+    height: clamp(32px, 6vw, 44px); /* 🔥 all mobiles */
     width: auto;
     object-fit: contain;
   }
 
-  /* NAV LINKS */
-  .navbar ul {
+  /* NAV LINKS — CENTER */
+  header.navbar nav {
     display: flex;
-    align-items: center;
-    gap: clamp(12px, 3vw, 18px);
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    justify-content: center;
+    width: 100%;
   }
 
-  .navbar ul li a {
-    font-size: clamp(14px, 4vw, 17px);
+  header.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 3vw, 20px);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  header.navbar .nav-links li a {
+    font-size: clamp(15px, 3vw, 18px);
     font-weight: 500;
-    line-height: 1;
     white-space: nowrap;
   }
 }
-
