@@ -1223,50 +1223,33 @@ section {
   padding-left: 6%;
   padding-right: 6%;
 }
-/* ===== MOBILE NAVBAR FIX (ALL PHONES) ===== */
+/* ===== MOBILE NAV CENTER ONLY ===== */
 @media (max-width: 1080px) {
 
   header.navbar {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;   /* NAV CENTER */
-    padding: 16px 20px;
   }
 
-  /* LOGO — LEFT, BIG, CLEAN */
-  header.navbar .logo {
-    position: absolute;
-    left: 20px;
-    display: flex;
-    align-items: center;
-  }
-
-  header.navbar .logo img {
-    height: clamp(32px, 6vw, 44px); /* 🔥 all mobiles */
-    width: auto;
-    object-fit: contain;
-  }
-
-  /* NAV LINKS — CENTER */
+  /* NAV CENTER */
   header.navbar nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   header.navbar .nav-links {
     display: flex;
     align-items: center;
-    gap: clamp(14px, 3vw, 20px);
+    gap: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   header.navbar .nav-links li a {
-    font-size: clamp(15px, 3vw, 18px);
-    font-weight: 500;
+    font-size: 16px;
     white-space: nowrap;
   }
 }
