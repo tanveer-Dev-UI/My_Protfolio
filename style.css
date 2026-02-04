@@ -1223,33 +1223,50 @@ section {
   padding-left: 6%;
   padding-right: 6%;
 }
-/* ===== MOBILE NAV CENTER ONLY ===== */
 @media (max-width: 1080px) {
 
+  /* HEADER STACK */
   header.navbar {
-    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 16px 16px 10px;
+    gap: 12px;
   }
 
-  /* NAV CENTER */
+  /* NAV CENTER ON TOP */
   header.navbar nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    order: 1;
   }
 
   header.navbar .nav-links {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    gap: clamp(14px, 4vw, 22px);
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   header.navbar .nav-links li a {
-    font-size: 16px;
+    font-size: clamp(15px, 4vw, 18px);
+    font-weight: 500;
     white-space: nowrap;
+  }
+
+  /* LOGO BELOW NAV (CENTERED & PREMIUM) */
+  header.navbar .logo {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  /* LOGO SIZE — RESPONSIVE & CLEAN */
+  header.navbar .logo img {
+    height: clamp(34px, 6vw, 46px);
+    width: auto;
+    object-fit: contain;
   }
 }
