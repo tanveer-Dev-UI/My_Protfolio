@@ -1257,10 +1257,7 @@ section {
 
   /* LOGO BELOW NAV (CENTERED & PREMIUM) */
   header.navbar .logo {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    margin-top: 6px;
+   display: none;
   }
 
   /* LOGO SIZE — RESPONSIVE & CLEAN */
@@ -1268,5 +1265,46 @@ section {
     height: clamp(34px, 6vw, 46px);
     width: auto;
     object-fit: contain;
+  }
+}
+/* ================================
+   ABOUT LOGO – DEFAULT (DESKTOP)
+================================ */
+
+/* Desktop pe about logo hide */
+.about-logo {
+  display: none;
+}
+
+
+/* ================================
+   MOBILE ONLY (480px – 1080px)
+================================ */
+@media (max-width: 1080px) {
+
+  /* NAVBAR SE LOGO HIDE */
+  .navbar .logo {
+    display: none !important;
+  }
+
+  /* ABOUT SECTION ME LOGO SHOW */
+  .about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .about-logo img {
+    height: clamp(42px, 9vw, 64px); /* har mobile ke liye perfect */
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* PHOTO SE THODA GAP */
+  .about-photo {
+    margin-top: 10px;
   }
 }
