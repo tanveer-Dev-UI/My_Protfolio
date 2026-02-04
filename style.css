@@ -1146,7 +1146,80 @@ section {
   z-index: 1;
 }
 
-
 /* Custom Cursor */
+/* =========================
+   HERO – FINAL CLEAN VERSION
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  background: #0b0f1a;
+  overflow: hidden;
+  padding-top: 120px; /* navbar space */
+  padding-bottom: 80px;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin: 20px auto 30px;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+/* ===== HERO MOBILE FINAL FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 
+  /* 🔥 glow 100% off */
+  .hero::before,
+  .hero::after,
+  .hero-visual,
+  .blob,
+  .glow,
+  .gradient-bg {
+    display: none !important;
+  }
+}
+section {
+  padding: 80px 6%;
+}
+
+.hero {
+  padding-left: 6%;
+  padding-right: 6%;
+}

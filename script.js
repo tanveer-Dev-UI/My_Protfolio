@@ -11,57 +11,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.1 });
 
 srElements.forEach(el => observer.observe(el));
-const typedText = document.getElementById("typed-text");
 
-const phrases = [
-  "Modern Websites,",
-  "Responsive Portfolios &",
-  "High-Converting Landing Pages"
-];
-
-let i = 0;
-let j = 0;
-let currentPhrase = [];
-let isDeleting = false;
-let isEnd = false;
-
-function type() {
-  isEnd = false;
-  typedText.innerHTML = currentPhrase.join('');
-
-  if (!isDeleting && j < phrases[i].length) {
-    currentPhrase.push(phrases[i][j]);
-    j++;
-    typedText.innerHTML = currentPhrase.join('');
-  }
-
-  if(isDeleting && j <= phrases[i].length){
-    currentPhrase.pop();
-    j--;
-    typedText.innerHTML = currentPhrase.join('');
-  }
-
-  if(j == phrases[i].length){
-    isEnd = true;
-    isDeleting = true;
-  }
-
-  if(isDeleting && j === 0){
-    currentPhrase = [];
-    isDeleting = false;
-    i++;
-    if(i >= phrases.length){
-      i = 0;
-    }
-  }
-
-  const speedUp = 50;
-  const normalSpeed = 100;
-  const time = isEnd ? 1500 : isDeleting ? speedUp : normalSpeed;
-  setTimeout(type, time);
-}
-
-type();
 /* Particles Moving */
 const sections = document.querySelectorAll("section");
 
