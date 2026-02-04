@@ -1223,3 +1223,45 @@ section {
   padding-left: 6%;
   padding-right: 6%;
 }
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(14px, 4vw, 20px);
+  }
+
+  /* LOGO WRAPPER */
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    margin-left: clamp(4px, 2vw, 12px);
+  }
+
+  /* 🔥 LOGO — RESPONSIVE LIKE ZOMATO */
+  .navbar .logo img {
+    height: clamp(26px, 6vw, 38px);
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* NAV LINKS */
+  .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 18px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .navbar ul li a {
+    font-size: clamp(14px, 4vw, 17px);
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
