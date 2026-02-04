@@ -9,9 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -36,7 +34,7 @@
 
     <!-- Hero Section -->
     <section id="Home" class="hero">
-
+        
         <canvas class="section-particles"></canvas>
         <div class="hero-content scroll-reveal">
             <h1>
@@ -63,10 +61,6 @@
 
     <!-- About Section -->
     <section id="About" class="about">
-        <div class="about-logo">
-            <img src="Tanveerdev.png" alt="TanveerDev Logo">
-        </div>
-
         <canvas class="section-particles"></canvas>
         <div class="about-container">
             <div class="about-photo scroll-reveal">
@@ -255,23 +249,22 @@
                 © 2026 • Designed & Built by <span>Tanveer Ahmad</span>
             </div>
         </div>
-
+        
     </footer>
-
-
+    
+  
     <script src="script.js"></script>
-    <script>
-        const navLinks = document.querySelectorAll(".nav-links a");
+<script>
+  const navLinks = document.querySelectorAll(".nav-links a");
 
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.forEach(l => l.classList.remove("active"));
-                link.classList.add("active");
-            });
-        });
-    </script>
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+</script>
 
 
 </body>
-
 </html>
