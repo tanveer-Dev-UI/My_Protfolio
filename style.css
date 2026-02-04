@@ -1267,15 +1267,6 @@ section {
     object-fit: contain;
   }
 }
-/* ================================
-   ABOUT LOGO – DEFAULT (DESKTOP)
-================================ */
-
-/* Desktop pe about logo hide */
-.about-logo {
-  display: none;
-}
-
 
 /* ================================
    MOBILE ONLY (480px – 1080px)
